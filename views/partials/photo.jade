@@ -1,0 +1,5 @@
+img.productImage(src= '#{photo.urls.medium}')
+p.photo #{photo.description}
+    | votes: #{photo.user_product_image_helpful_votes.length}
+p (by #{photo.user.review_display_name})
+    | img(src= '#{photo.user_profile.main_image.urls.small}')

@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    .product
+        img.productImage(src= '#{product.brandImage}')
+        .displayName #{product.displayName}
+        .fullDescription #{product.fullDescription}
+        a(href= '/') New search |
+        a(href= '/community/#{product.id}') What people are saying?
+        .features
+            ul
+                each feature in product.features
+                    li.feature #{feature.displayName}: #{feature.value}
+        .number #{product.detailImages.length} images
+        .images
+            ul
+                each image in product.detailImages
+                    img.detail(src='#{image.smallUrl}')

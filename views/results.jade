@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .products
+        each product in products
+            .product
+                p
+                    '#{product.displayName}'
+                    a(href= '/community/#{product.id}') What people are saying?
+                    a(href= '/product/#{product.id}')
+                        img.productImage(src= '#{product.thumbnailImage.url}')
+

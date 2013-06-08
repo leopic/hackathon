@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    .content
+        .photos #{content.photos.length}
+            each photo in content.photos
+                !=partial('partials/photo', photo)
+        .videos #{content.videos.length}
+            each video in content.videos
+                p.video #{video}
+        .reviews #{content.reviews.length}
+        .questions #{content.questions.length}
